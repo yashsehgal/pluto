@@ -26,6 +26,7 @@
   # Todo: Divide function
     - normal division
     - array elemental division method
+    - production of boolean values
   # Todo: Percentage function
     - calculates percentage with the given number value
     - calculates the percentage with the help of an array
@@ -47,7 +48,7 @@ class BasicToolSet:
 
   # addition functions
   # - Normal addition for 2 numbers
-  def addNumber(self, num1, num2):
+  def addNum(self, num1, num2):
     return num1 + num2
   
   # - Normal addition for 3 numbers
@@ -82,6 +83,36 @@ class BasicToolSet:
       negTotal -= arraylist[count]
     
     return negTotal
+
+  def productNum(self, num1, num2):
+    return num1 * num2
+  
+  def productArrayNumbers(self, arraylist):
+    total = 1
+    for count in range(len(arraylist)):
+      total *= arraylist[count]
+    
+    return total
+
+  def productBoolean(self, input1, input2):
+    return input1 * input2
+  
+  def productBooleanList(self, inputList):
+    result = True
+    for count in range(len(inputList)):
+      result *= inputList[count]
+    
+    return result
+
+  def divideNum(self, num1, num2):
+    return num1 / num2
+  
+  def divideArrayNumbers(self, arraylist):
+    total = 1
+    for count in range(len(arraylist)):
+      total /= arraylist[count] / total
+    
+    return total
 
   def computePercentageFromArray(self, number, arraylist):
     total = 0
