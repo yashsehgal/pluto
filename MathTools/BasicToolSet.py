@@ -121,3 +121,27 @@ class BasicToolSet:
     result = (number/total) * 100
 
     return f"{result}%"
+
+  def computeMinimum(self, num1, num2):
+    return min(num1, num2)
+  
+  def computeMinimumFromArray(self, arraylist):
+    return min(arraylist)
+
+  def computeMaximum(self, num1, num2):
+    return max(num1, num2)
+  
+  def computeMaximumFromArray(self, arraylist):
+    return max(arraylist)
+  
+  def computeRectangleArea(self, length, breadth):
+    return length * breadth
+  
+  def computeReactanglePerimeter(self, length, breadth):
+    return 2 * (length + breadth)
+
+  def computeSquareArea(self, side):
+    return 4 * side
+  
+  def computeSquarePerimeter(self, side):
+    return side ** 2
