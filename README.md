@@ -9,7 +9,6 @@
 ## About Pluto
 Pluto is a Python based framework for fast and more efficient function based development. It contains some basic functions like classic math function and some other bruteforce formulations that you may use in your code without writing any rocket-science formula.
 
-This module also contains some speech modules. With them, you can easily perform speech related tasks in your code.
 
 ## About Developer
 Hey fellow developers, I am Yash Sehgal from Indore, India. I developed this code base when I was in my High-School. I created this for my personal use but I thought I should continue this program and optimise it at different levels. I am glad that you are using this or may not be using, that's fine.
@@ -49,7 +48,7 @@ Write this section after developing everything!---
 
 ## Contribution
 *   If you want to contribute in Pluto, then read the constributing.md file from the github repository
-*   Or simply click here and take a breif look at [CONTRIBUTING.md]()
+*   Or simply click here and take a breif look at [CONTRIBUTING.md](https://www.github.com/yashsehgal/pluto/CONTRIBUTING.md)
 
 ## Build Requirements
 *   Pyhton should be installed on your system
