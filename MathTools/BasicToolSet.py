@@ -145,3 +145,14 @@ class BasicToolSet:
   
   def computeSquarePerimeter(self, side):
     return side ** 2
+
+  def checkEven(self, number):
+    if (number % 2 == 0):
+      return True
+    else: return False
+  
+  def checkOdd(self, number):
+    if (number % 2 == 0):
+      return False
+    else: return True
+  
