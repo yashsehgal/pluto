@@ -48,7 +48,7 @@ Write this section after developing everything!---
 
 ## Contribution
 *   If you want to contribute in Pluto, then read the constributing.md file from the github repository
-*   Or simply click here and take a breif look at [CONTRIBUTING.md](https://www.github.com/yashsehgal/pluto/CONTRIBUTING.md)
+*   Or simply click here and take a breif look at [CONTRIBUTING.md](https://github.com/yashsehgal/pluto/blob/master/CONTRIBUTING.md)
 
 ## Build Requirements
 *   Pyhton should be installed on your system
