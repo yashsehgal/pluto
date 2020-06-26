@@ -24,4 +24,13 @@ class ScientificToolSet:
   def sigmoid(self, seed_value):
     return 1 / (1 + np.exp(-seed_value))
   
+  def addMatrix(self, matrixOne, matrixTwo):
+    resultantMatrix = []
+    if (len(matrixOne) == len(matrixTwo)): 
+      for count in range(len()):
+        resultantMatrix.append(matrixOne[count] + matrixTwo[count])
+
+  def vectorProduct(self, matrixOne, matrixTwo):
+    return np.product(matrixOne, matrixTwo)
+  
   
