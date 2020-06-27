@@ -40,8 +40,6 @@
 */
 #include <iostream>
 #include <string>
-#include <BasicToolSet.h>
-
 class BasicToolSet
 {
 private:
