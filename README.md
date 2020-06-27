@@ -1,7 +1,7 @@
 # Pluto
 
-### Version 1.0
-[Release 1.0](https://github.com/yashsehgal/pluto) is now available for free, on GitHub
+### Version 1.10
+[Release 1.10](https://github.com/yashsehgal/pluto) is now available for free, on GitHub
 
 ## Coming Soon
 *   Pluto v.1.10 with speech recognition and algorithmic features.
