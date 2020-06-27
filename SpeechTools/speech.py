@@ -18,3 +18,8 @@ def speak(textCommand):
   engineObject.say(text=textCommand)
   engineObject.runAndWait()
 
+  if (textCommand == None):
+    print("The speech command is valid, but empty!")
+    print("Give a non-empty textCommand")
+  
+
