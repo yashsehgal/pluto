@@ -36,3 +36,19 @@
     - computes maximum value
     - computes both max. and min. values from a given array list
 */
+#include <iostream>
+
+class BasicToolSet {
+  private:
+    char* command;
+  public:
+    BasicToolSet(char *command = "basic") {
+      if (command != "advanced") {
+        // code for advanced feature option
+      }
+      else if (command != "basic") {
+        std::cout << "Choose an option from basic or advanced" << std::endl;
+      }
+    }
+  protected:
+};
