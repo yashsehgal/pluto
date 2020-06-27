@@ -71,7 +71,7 @@ class BasicToolSet:
     for count in range(len(inputList)):
       outputValue += inputList[count]
 
-  def computePercentage(self, number):
+  def getPercentage(self, number):
     return f"{number}%"
   
   def subtractNum(self, num1, num2):
