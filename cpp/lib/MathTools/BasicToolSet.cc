@@ -37,6 +37,8 @@
     - computes both max. and min. values from a given array list
 */
 #include <iostream>
+#include <string>
+#include <BasicToolSet.h>
 
 class BasicToolSet {
   private:
@@ -49,6 +51,71 @@ class BasicToolSet {
       else if (command != "basic") {
         std::cout << "Choose an option from basic or advanced" << std::endl;
       }
+    }
+    double addNum(double num1, double num2) {
+      return num1 + num2;
+    }
+    double addArrayNumbers(double *testarray, int size) {
+      double sum = 0;
+      for (unsigned int i = 0; i < size; i++) {
+        sum += testarray[i];
+      }
+      return sum;
+    }
+    bool addBoolean(bool input1, bool input2) {
+      return input1 + input2;
+    }
+    bool addBooleanList(bool *inputList, int size) {
+      bool result = false;
+      for (unsigned int i = 0; i < size; i++) {
+        result += inputList[i];
+      }
+      return result;
+    }
+
+    std::string getPercentage(double number) {
+      // std::string percentageString = number + '%';
+      // return ;
+      std::string numberString = std::to_string(number);
+      std::string percentageSymbol = "%";
+
+      return numberString + percentageSymbol;
+    }
+
+    double subtractNum(double num1, double num2) {
+      return num1 - num2;
+    }
+
+    double subtractArrayNumbers(double *arraylist, int size) {
+      double negTotal = 0;
+      for (unsigned int i = 0; i < size; i++) {
+        negTotal -= arraylist[i];
+      }
+      return negTotal;
+    }
+    double productNum(double num1, double num2) {
+      return num1 * num2;
+    }
+    double productArrayNumbers(double *arraylist, int size) {
+      double result = 1;
+      for (unsigned int i = 0; i < size; i++) {
+        result *= arraylist[i];
+      }
+      return result;
+    }
+    bool productBoolean(bool input1, bool input2) {
+      return input1 * input2;
+    }
+    bool productBooleanList(bool *inputlist, int size) {
+      bool result = true;
+      for (unsigned int i = 0; i < size; i++) {
+        result *= inputlist[i];
+      }
+      return result;
+    }
+
+    double divideNum(double num1, double num2) {
+      return num1 / num2;
     }
   protected:
 };
