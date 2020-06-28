@@ -61,7 +61,7 @@ public:
   {
     return num1 + num2;
   }
-  double addArrayNumbers(double *testarray, int size)
+  double addArrayNumbers(double * testarray, int size)
   {
     double sum = 0;
     for (unsigned int i = 0; i < size; i++)
@@ -74,7 +74,7 @@ public:
   {
     return input1 + input2;
   }
-  bool addBooleanList(bool *inputList, int size)
+  bool addBooleanList(bool * inputList, int size)
   {
     bool result = false;
     for (unsigned int i = 0; i < size; i++)
@@ -99,7 +99,7 @@ public:
     return num1 - num2;
   }
 
-  double subtractArrayNumbers(double *arraylist, int size)
+  double subtractArrayNumbers(double * arraylist, int size)
   {
     double negTotal = 0;
     for (unsigned int i = 0; i < size; i++)
@@ -112,7 +112,7 @@ public:
   {
     return num1 * num2;
   }
-  double productArrayNumbers(double *arraylist, int size)
+  double productArrayNumbers(double * arraylist, int size)
   {
     double result = 1;
     for (unsigned int i = 0; i < size; i++)
@@ -125,7 +125,7 @@ public:
   {
     return input1 * input2;
   }
-  bool productBooleanList(bool *inputlist, int size)
+  bool productBooleanList(bool * inputlist, int size)
   {
     bool result = true;
     for (unsigned int i = 0; i < size; i++)
@@ -139,7 +139,57 @@ public:
   {
     return num1 / num2;
   }
+  double divideArrayNumbers(double * arraylist, int size) {
+    double total = 1;
+    for (unsigned int i = 0; i < size; i++) {
+      total /= arraylist[i] / total;
+    }
+    return total;
+  }
+  std::string computePercentageFromArray(double number, double * arraylist, int size) {
+    double total = 0;
+    for (unsigned int i = 0; i < size; i++) {
+      total += arraylist[i];
+    }
+    double result = (number/total) * 100;
 
+    std::string numberStringFormat = std::to_string(result);
+    std::string percentageSymbol = "%";
+
+    return numberStringFormat + percentageSymbol;
+  }
+
+  double computeMinimum(double num1, double num2) {
+    if (num1 < num2) {
+      return num1;
+    }
+    else if (num1 == num2) {
+      return ;
+    }
+    else {
+      return num2;
+    }
+  }
+  double computeMinimumFromArray(double * arraylist, int size) {
+    double minValue = arraylist[0];
+    for (unsigned int i = 0; i < size; i++) {
+      if (arraylist[i] < minValue) {
+        minValue = arraylist[i];
+      }
+    }
+    return minValue;
+  }
+  double computeMaximum(double num1, double num2) {
+    if (num1 > num2) {
+      return num1;
+    }
+    else if (num1 == num2) {
+      return ;
+    }
+    else {
+      return num2;
+    }
+  }
 protected:
 };
 
