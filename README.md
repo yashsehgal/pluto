@@ -1,3 +1,5 @@
+![C/C++ CI](https://github.com/yashsehgal/pluto/workflows/C/C++%20CI/badge.svg)
+
 # Pluto
 
 ### Version 1.11
