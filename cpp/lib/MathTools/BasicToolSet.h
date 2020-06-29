@@ -190,6 +190,43 @@ public:
       return num2;
     }
   }
+  double computeMaximumFromArray(double * arraylist, int size) {
+    double maxValue = arraylist[0];
+    for (unsigned int i = 0; i < size; i++) {
+      if (arraylist[i] > maxValue) {
+        maxValue = arraylist[i];
+      }
+    }
+    return maxValue;
+  }
+  double computeRectangleArea(double length, double breadth) {
+    return length * breadth;
+  }
+  double computeRectanglePerimeter(double length, double breadth) {
+    return 2 * (length + breadth);
+  }
+  double computeSquareArea(double side) {
+    return side * side;
+  }
+  double computeSqaurePerimeter(double side) {
+    return 4 * side;
+  }
+  bool checkEven(int number) {
+    if (number % 2 == 0) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  bool checkOdd(int number) {
+    if (number % 2 == 0) {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
 protected:
 };
 
