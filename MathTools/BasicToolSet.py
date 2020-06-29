@@ -43,78 +43,78 @@ class BasicToolSet:
   # the mode parameter has 2 possible inputs which are, "basic" and "advance" or "advanced"
   # By-Default the mode is considered to be Basic for normal usage but user may change the object properties
   # by changing the mode type while object contruction
-  def __init__(self, mode="basic"):
+  def __init__(mode="basic"):
     self.mode = mode
 
   # addition functions
   # - Normal addition for 2 numbers
-  def addNum(self, num1, num2):
+  def addNum(num1, num2):
     return num1 + num2
   
   # - Normal addition for 3 numbers
-  # def addNumber(self, num1, num2, num3):
+  # def addNumber(  num1, num2, num3):
   #   return num1 + num2 + num3
   
   # - Array Submission - list total method
-  def addArrayNumbers(self, testarray):
+  def addArrayNumbers(testarray):
     total = 0
     for count in range(len(testarray)):
       total += testarray[count]
     return total
   
   # Boolean addition
-  def addBoolean(self, input1, input2):
+  def addBoolean(  input1, input2):
     return input1 + input2
   
-  def addBooleanList(self, inputList):
+  def addBooleanList(inputList):
     outputValue = False
     for count in range(len(inputList)):
       outputValue += inputList[count]
 
-  def getPercentage(self, number):
+  def getPercentage(number):
     return f"{number}%"
   
-  def subtractNum(self, num1, num2):
+  def subtractNum(num1, num2):
     return num1 - num2
   
-  def subtractArrayNumbers(self, arraylist):
+  def subtractArrayNumbers(arraylist):
     negTotal = 0
     for count in range(len(arraylist)):
       negTotal -= arraylist[count]
     
     return negTotal
 
-  def productNum(self, num1, num2):
+  def productNum(num1, num2):
     return num1 * num2
   
-  def productArrayNumbers(self, arraylist):
+  def productArrayNumbers(arraylist):
     total = 1
     for count in range(len(arraylist)):
       total *= arraylist[count]
     
     return total
 
-  def productBoolean(self, input1, input2):
+  def productBoolean(input1, input2):
     return input1 * input2
   
-  def productBooleanList(self, inputList):
+  def productBooleanList(  inputList):
     result = True
     for count in range(len(inputList)):
       result *= inputList[count]
     
     return result
 
-  def divideNum(self, num1, num2):
+  def divideNum(num1, num2):
     return num1 / num2
   
-  def divideArrayNumbers(self, arraylist):
+  def divideArrayNumbers(arraylist):
     total = 1
     for count in range(len(arraylist)):
       total /= arraylist[count] / total
     
     return total
 
-  def computePercentageFromArray(self, number, arraylist):
+  def computePercentageFromArray(number, arraylist):
     total = 0
     for count in range(len(arraylist)):
       total += arraylist[count]
@@ -122,36 +122,36 @@ class BasicToolSet:
 
     return f"{result}%"
 
-  def computeMinimum(self, num1, num2):
+  def computeMinimum(num1, num2):
     return min(num1, num2)
   
-  def computeMinimumFromArray(self, arraylist):
+  def computeMinimumFromArray(arraylist):
     return min(arraylist)
 
-  def computeMaximum(self, num1, num2):
+  def computeMaximum(num1, num2):
     return max(num1, num2)
   
-  def computeMaximumFromArray(self, arraylist):
+  def computeMaximumFromArray(arraylist):
     return max(arraylist)
   
-  def computeRectangleArea(self, length, breadth):
+  def computeRectangleArea(length, breadth):
     return length * breadth
   
-  def computeReactanglePerimeter(self, length, breadth):
+  def computeReactanglePerimeter(length, breadth):
     return 2 * (length + breadth)
 
-  def computeSquareArea(self, side):
+  def computeSquareArea(side):
     return 4 * side
   
-  def computeSquarePerimeter(self, side):
+  def computeSquarePerimeter(side):
     return side ** 2
 
-  def checkEven(self, number):
+  def checkEven(number):
     if (number % 2 == 0):
       return True
     else: return False
   
-  def checkOdd(self, number):
+  def checkOdd(number):
     if (number % 2 == 0):
       return False
     else: return True

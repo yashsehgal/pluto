@@ -18,19 +18,19 @@ import numpy as np
 '''
 
 class ScientificToolSet:
-  def __init__(self, mode="basic"):
+  def __init__(  mode="basic"):
     self.mode = mode
   
-  def sigmoid(self, seed_value):
+  def sigmoid(  seed_value):
     return 1 / (1 + np.exp(-seed_value))
   
-  def addMatrix(self, matrixOne, matrixTwo):
+  def addMatrix(  matrixOne, matrixTwo):
     resultantMatrix = []
     if (len(matrixOne) == len(matrixTwo)): 
       for count in range(len()):
         resultantMatrix.append(matrixOne[count] + matrixTwo[count])
 
-  def vectorProduct(self, matrixOne, matrixTwo):
+  def vectorProduct(  matrixOne, matrixTwo):
     return np.product(matrixOne, matrixTwo)
   
   
