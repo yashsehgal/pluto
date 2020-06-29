@@ -1,11 +1,12 @@
 # Pluto
 
-### Version 1.10
-[Release 1.10](https://github.com/yashsehgal/pluto) is now available for free, on GitHub
+### Version 1.11
+[Release 1.11](https://github.com/yashsehgal/pluto) is now available for free, on GitHub
 
 ## Coming Soon
-*   Pluto v.1.10 with speech recognition and algorithmic features.
+*   Pluto v.1.12 with AdvancedMath feature tool.
 *   More efficient and easy method of using mathematical tools feature.
+
 ## About Pluto
 Pluto is a Python based framework for fast and more efficient function based development. It contains some basic functions like classic math function and some other bruteforce formulations that you may use in your code without writing any rocket-science formula.
 
