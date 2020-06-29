@@ -12,7 +12,8 @@ class ConnectFile {
   int length;
   int wordCount;
   char * filename;
-
+  bool fileAvailability;
+  
   public:
   ConnectFile() {
     filename = '\0';
