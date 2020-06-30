@@ -18,9 +18,6 @@ import numpy as np
 '''
 
 
-def __init__(mode="basic"):
-  self.mode = mode
-  
 def sigmoid(seed_value):
   return 1 / (1 + np.exp(-seed_value))
   
@@ -30,7 +27,7 @@ def addMatrix(matrixOne, matrixTwo):
     for count in range(len()):
       resultantMatrix.append(matrixOne[count] + matrixTwo[count])
 
-def vectorProduct(  matrixOne, matrixTwo):
+def vectorProduct(matrixOne, matrixTwo):
   return np.product(matrixOne, matrixTwo)
   
   
