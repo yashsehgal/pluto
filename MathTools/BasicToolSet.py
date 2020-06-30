@@ -36,7 +36,7 @@
     - computes maximum value
     - computes both max. and min. values from a given array list
 '''
-class BasicToolSet:
+
   # class method description, the class has so many functions and methods for nominal level
   # math operations
 
