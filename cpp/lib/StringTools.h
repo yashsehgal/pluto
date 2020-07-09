@@ -120,12 +120,12 @@ class StringTools {
   bool compareString(char * testString, char * sourceString) {
     int vecCount = 0;
     if(std::strlen(testString) == std::strlen(sourceString)) {
-      for(unsigned int count = 0; count < strlen(testString); count++) {
+      for(unsigned int count = 0; count < std::strlen(testString); count++) {
         if(testString[count] == sourceString[count]) vecCount++;
         else break;
       }
     }
-    if(strlen(testString) == strlen(sourceString) == vecCount) return true;
+    if(std::strlen(testString) == std::strlen(sourceString) == vecCount) return true;
     else return false;
   }
   
