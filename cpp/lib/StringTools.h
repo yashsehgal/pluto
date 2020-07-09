@@ -1,6 +1,9 @@
 #ifndef _STRING_TOOLS_MODULE__
 #define _STRING_TOOLS_MODULE__
 
+
+#include <string>
+
 class StringTools {
   private:
   public:
@@ -74,8 +77,46 @@ class StringTools {
       joinedString[count + currentIndex] = joinableString[count];
       currentIndex++;
     }
+    return (char *)joinedString;
   }
 
+  void copyString(char *(&testString), char * stringToCopy) {
+    int testStringLength = 0;
+    while(testString[testStringLength] != '\0') {++testStringLength;}
+    int stringToCopyLength = 0;
+    while(stringToCopy[stringToCopyLength] != '\0') {++stringToCopyLength;}
+
+    // now we have lengths of all the strings
+    for(unsigned int count = 0; count < testStringLength; count++) {
+      testString[count] = '\0';
+    }
+    int testStringLength = 0;
+    for(unsigned int count = 0; count < stringToCopyLength; count++) {
+      testString[count] = stringToCopy[count];
+      ++testStringLength;
+    }
+  }
+
+  int getCapitalLetterCount(char * testString) {
+    int length = getStringLength(testString);
+    int numberOfCapitalLetters = 0;
+    for(unsigned int count = 0; count < length; count++) {
+      if(std::isupper(testString[count])) {
+        numberOfCapitalLetters++;
+      }
+    }
+    return (int)numberOfCapitalLetters;
+  }
+  int getLowerLetterCount(char * testString) {
+    int length = getStringLength(testString);
+    int numberOfLowerLetter = 0;
+    for(unsigned int count = 0; count < length; count++) {
+      if(std::islower(testString[count])) {
+        numberOfLowerLetter++;
+      }
+    }
+  }
+  
   protected:
 };
 
