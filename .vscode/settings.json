@@ -2,5 +2,10 @@
   "files.associations": {
     "*.py": "python",
     "string": "cpp"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#000000",
+    "titleBar.activeBackground": "#c300ff",
+    "titleBar.activeForeground": "#000000"
   }
 }
