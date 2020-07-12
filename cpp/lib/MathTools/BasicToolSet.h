@@ -1,5 +1,14 @@
 #ifndef _MATH_TOOLS__BASIC_TOOL_SET_CPP_MACRO___
 #define _MATH_TOOLS__BASIC_TOOL_SET_CPP_MACRO___
+
+
+/**
+ * Global declarations
+ * 
+ */
+
+#define PI 3.1415916
+
 /**
  * This is the c++ version of BasicToolSet module
  * This is the most basic module of Pluto framework which contains the 
@@ -518,20 +527,36 @@ public:
   {
     return side * side;
   }
-
-  double computeSqaurePerimeter(double side)
+  double computeSquarePerimeter(double side)
   {
     return 4 * side;
   }
-  double computeSqaurePerimeter(int side)
+  double computeSquarePerimeter(int side)
   {
     return 4 * side;
   }
-  double computeSqaurePerimeter(float side)
+  double computeSquarePerimeter(float side)
   {
     return 4 * side;
   }
-
+  double computeCircleCircumference(int radius) {
+    return 2 * PI * radius;
+  }
+  double computeCircleCircumference(float radius) {
+    return 2 * PI * radius;
+  }
+  double computeCircleCircumference(double radius) {
+    return 2 * PI * radius;
+  }
+  double computeCircleArea(int radius) {
+    return PI * radius * radius;
+  }
+  double computeCircleArea(double radius) {
+    return PI * radius * radius;
+  }
+  double computeCircleArea(float radius) {
+    return PI * radius * radius;
+  }
   bool checkEven(int number)
   {
     if (number % 2 == 0)
