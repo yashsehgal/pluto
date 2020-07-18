@@ -1,9 +1,9 @@
 #ifndef _CONNECT_FILE__SPEECH_TOOLS__
 #define _CONNECT_FILE__SPEECH_TOOLS__
 
-#include <iostream>
+// #include <iostream>
 #include <string>
-#include <fstream.h>
+#include <fstream>
 
 class ConnectFile {
   private:
@@ -26,14 +26,14 @@ class ConnectFile {
 
     }
   }
-  bool checkFileStatus(char * filename, char * mode, char * type) {
+  bool checkFileStatus(const char * filename, const char * mode, const char * type) {
     if (mode == "in") {
       if (type == "bin") {
-        ifstream fileObject;
+        std::fstream fileObject;
         fileObject.open(filename, ios::in | ios::bin);
       }
       else if (type == "ate") {
-        ifstream fileObject;
+        std::fstream fileObject;
       }
     }
   }
