@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/LinearAlgebra.h
+iostream
+-
+string
+-
+
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/ScientificToolSet.h
+
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BasicToolSet.h
+iostream
+-
+string
+-
+
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BooleanAlgebra.h
+
+C:/Users/yashs/Desktop/framework/cpp/main.cpp
+main.h
+C:/Users/yashs/Desktop/framework/cpp/main.h
+iostream
+-
+
+C:/Users/yashs/Desktop/framework/cpp/main.h
+lib/MathTools/BasicToolSet.h
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BasicToolSet.h
+lib/MathTools/BooleanAlgebra.h
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BooleanAlgebra.h
+lib/MathTools/AdvancedTools/ScientificToolSet.h
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/ScientificToolSet.h
+lib/MathTools/AdvancedTools/LinearAlgebra.h
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/LinearAlgebra.h
+

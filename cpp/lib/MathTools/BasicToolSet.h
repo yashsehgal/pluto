@@ -52,74 +52,73 @@
 class BasicToolSet
 {
 private:
-  char *command;
+  char *command{};
 
 public:
-  BasicToolSet(char *command = "basic")
+  explicit BasicToolSet(const char *command = "basic")
   {
-    if (command != "advanced")
+    if (std::strcmp(command, "advanced") != 0)
     {
       // code for advanced feature option
     }
-    else if (command != "basic")
-    {
-      std::cout << "Choose an option from basic or advanced" << std::endl;
+    else {
+        std::cout << "Choose an option from basic or advanced" << std::endl;
     }
   }
-  double addNum(int num1, int num2)
+  static double addNum(int num1, int num2)
   {
     return num1 + num2;
   }
-  double addNum(float num1, float num2)
+  static double addNum(float num1, float num2)
   {
     return num1 + num2;
   }
-  double addNum(double num1, double num2)
+  static double addNum(double num1, double num2)
   {
     return num1 + num2;
   }
-  double addArrayNumbers(int *testarray, int size)
+  static double addArrayNumbers(const int *test_array, int size)
   {
     double total = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      total += testarray[i];
+      total += test_array[i];
     }
     return total;
   }
-  double addArrayNumbers(float *testarray, int size)
+  static double addArrayNumbers(const float *test_array, int size)
   {
     double total = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      total += testarray[i];
+      total += test_array[i];
     }
     return total;
   }
-  double addArrayNumbers(double *testarray, int size)
+  static double addArrayNumbers(const double *test_array, int size)
   {
     double sum = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      sum += testarray[i];
+      sum += test_array[i];
     }
     return sum;
   }
-  bool addBoolean(bool input1, bool input2)
+  static bool addBoolean(bool input1, bool input2)
   {
     return input1 + input2;
   }
-  bool addBooleanList(bool *inputList, int size)
+  static bool addBooleanList(const bool *input_list, int size)
   {
     bool result = false;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      result += inputList[i];
+      result += input_list[i];
     }
     return result;
   }
 
-  std::string getPercentage(double number)
+  static std::string getPercentage(double number)
   {
     // std::string percentageString = number + '%';
     // return ;
@@ -128,7 +127,7 @@ public:
 
     return numberString + percentageSymbol;
   }
-  std::string getPercentage(int number)
+  static std::string getPercentage(int number)
   {
     // std::string percentageString = number + '%';
     // return ;
@@ -137,7 +136,7 @@ public:
 
     return numberString + percentageSymbol;
   }
-  std::string getPercentage(float number)
+  static std::string getPercentage(float number)
   {
     // std::string percentageString = number + '%';
     // return ;
@@ -147,145 +146,145 @@ public:
     return numberString + percentageSymbol;
   }
 
-  double subtractNum(double num1, double num2)
+  static double subtractNum(double num1, double num2)
   {
     return num1 - num2;
   }
-  double subtractNum(int num1, int num2)
+  static double subtractNum(int num1, int num2)
   {
     return num1 - num2;
   }
-  double subtractNum(float num1, float num2)
+  static double subtractNum(float num1, float num2)
   {
     return num1 - num2;
   }
-  double subtractArrayNumbers(double *arraylist, int size)
+  static double subtractArrayNumbers(const double *array_list, int size)
   {
     double negTotal = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      negTotal -= arraylist[i];
+      negTotal -= array_list[i];
     }
     return negTotal;
   }
-  double subtractArrayNumbers(int *arraylist, int size)
+  static double subtractArrayNumbers(const int *array_list, int size)
   {
     double negTotal = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      negTotal -= arraylist[i];
+      negTotal -= array_list[i];
     }
     return negTotal;
   }
-  double subtractArrayNumbers(float *arraylist, int size)
+  static double subtractArrayNumbers(const float *array_list, int size)
   {
     double negTotal = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      negTotal -= arraylist[i];
+      negTotal -= array_list[i];
     }
     return negTotal;
   }
-  double productNum(double num1, double num2)
+  static double productNum(double num1, double num2)
   {
     return num1 * num2;
   }
-  double productNum(int num1, int num2)
+  static double productNum(int num1, int num2)
   {
     return num1 * num2;
   }
-  double productNum(float num1, float num2)
+  static double productNum(float num1, float num2)
   {
     return num1 * num2;
   }
-  double productArrayNumbers(double *arraylist, int size)
+  static double productArrayNumbers(const double *array_list, int size)
   {
     double result = 1;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      result *= arraylist[i];
+      result *= array_list[i];
     }
     return result;
   }
-  double productArrayNumbers(int *arraylist, int size)
+  static double productArrayNumbers(const int *array_list, int size)
   {
     double result = 1;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      result *= arraylist[i];
+      result *= array_list[i];
     }
     return result;
   }
-  double productArrayNumbers(float *arraylist, int size)
+  static double productArrayNumbers(const float *array_list, int size)
   {
     double result = 1;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      result *= arraylist[i];
+      result *= array_list[i];
     }
     return result;
   }
-  bool productBoolean(bool input1, bool input2)
+  static bool productBoolean(bool input1, bool input2)
   {
     return input1 * input2;
   }
-  bool productBooleanList(bool *inputlist, int size)
+  static bool productBooleanList(const bool *input_list, int size)
   {
     bool result = true;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      result *= inputlist[i];
+      result *= input_list[i];
     }
     return result;
   }
 
-  double divideNum(double num1, double num2)
+  static double divideNum(double num1, double num2)
   {
     return num1 / num2;
   }
-  double divideNum(int num1, int num2)
+  static double divideNum(int num1, int num2)
   {
-    return num1 / num2;
+    return ((double)num1 / (double )num2);
   }
-  double divideNum(float num1, float num2)
+  static double divideNum(float num1, float num2)
   {
     return num1 / num2;
   }
 
-  double divideArrayNumbers(double *arraylist, int size)
+  static double divideArrayNumbers(const double *array_list, int size)
   {
     double total = 1;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      total /= arraylist[i] / total;
+      total /= array_list[i] / total;
     }
     return total;
   }
-  double divideArrayNumbers(int *arraylist, int size)
+  static double divideArrayNumbers(const int *array_list, int size)
   {
     double total = 1;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      total /= arraylist[i] / total;
+      total /= array_list[i] / total;
     }
     return total;
   }
-  double divideArrayNumbers(float *arraylist, int size)
+  static double divideArrayNumbers(const float *array_list, int size)
   {
     double total = 1;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      total /= arraylist[i] / total;
+      total /= array_list[i] / total;
     }
     return total;
   }
 
-  std::string computePercentageFromArray(double number, double *arraylist, int size)
+  static std::string computePercentageFromArray(double number, const double *array_list, int size)
   {
     double total = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      total += arraylist[i];
+      total += array_list[i];
     }
     double result = (number / total) * 100;
 
@@ -294,12 +293,12 @@ public:
 
     return numberStringFormat + percentageSymbol;
   }
-  std::string computePercentageFromArray(int number, int *arraylist, int size)
+  static std::string computePercentageFromArray(int number, const int *array_list, int size)
   {
     double total = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      total += arraylist[i];
+      total += array_list[i];
     }
     double result = (number / total) * 100;
 
@@ -308,12 +307,12 @@ public:
 
     return numberStringFormat + percentageSymbol;
   }
-  std::string computePercentageFromArray(float number, float *arraylist, int size)
+  static std::string computePercentageFromArray(float number, const float *array_list, int size)
   {
     double total = 0;
-    for (unsigned int i = 0; i < size; i++)
+    for (  int i = 0; i < size; i++)
     {
-      total += arraylist[i];
+      total += array_list[i];
     }
     double result = (number / total) * 100;
 
@@ -323,283 +322,231 @@ public:
     return numberStringFormat + percentageSymbol;
   }
 
-  double computeMinimum(double num1, double num2)
+  static double computeMinimum(double num1, double num2)
   {
     if (num1 < num2)
     {
       return num1;
     }
-    else if (num1 == num2)
-    {
-      return;
-    }
-    else
+    else if (num1 > num2)
     {
       return num2;
     }
   }
-  double computeMinimum(int num1, int num2)
+  static double computeMinimum(int num1, int num2)
   {
     if (num1 < num2)
     {
       return num1;
     }
-    else if (num1 == num2)
-    {
-      return;
-    }
-    else
+    else if (num1 > num2)
     {
       return num2;
     }
   }
-  double computeMinimum(float num1, float num2)
+  static double computeMinimum(float num1, float num2)
   {
     if (num1 < num2)
     {
       return num1;
     }
-    else if (num1 == num2)
-    {
-      return;
-    }
-    else
+    else if (num1 > num2)
     {
       return num2;
     }
   }
 
-  double computeMinimumFromArray(double *arraylist, int size)
+  static double computeMinimumFromArray(const double *array_list, int size)
   {
-    double minValue = arraylist[0];
-    for (unsigned int i = 0; i < size; i++)
+    double minValue = array_list[0];
+    for (  int i = 0; i < size; i++)
     {
-      if (arraylist[i] < minValue)
+      if (array_list[i] < minValue)
       {
-        minValue = arraylist[i];
+        minValue = array_list[i];
       }
     }
     return minValue;
   }
-  double computeMinimumFromArray(int *arraylist, int size)
+  static double computeMinimumFromArray(const int *array_list, int size)
   {
-    double minValue = arraylist[0];
-    for (unsigned int i = 0; i < size; i++)
+    double minValue = array_list[0];
+    for (  int i = 0; i < size; i++)
     {
-      if (arraylist[i] < minValue)
+      if (array_list[i] < minValue)
       {
-        minValue = arraylist[i];
+        minValue = array_list[i];
       }
     }
     return minValue;
   }
-  double computeMinimumFromArray(float *arraylist, int size)
+  static double computeMinimumFromArray(const float *array_list, int size)
   {
-    double minValue = arraylist[0];
-    for (unsigned int i = 0; i < size; i++)
+    double minValue = array_list[0];
+    for (  int i = 0; i < size; i++)
     {
-      if (arraylist[i] < minValue)
+      if (array_list[i] < minValue)
       {
-        minValue = arraylist[i];
+        minValue = array_list[i];
       }
     }
     return minValue;
   }
 
-  double computeMaximum(double num1, double num2)
+  static double computeMaximum(double num1, double num2)
   {
     if (num1 > num2)
     {
       return num1;
     }
-    else if (num1 == num2)
-    {
-      return;
-    }
-    else
+    else if (num1 < num2)
     {
       return num2;
     }
   }
-  double computeMaximum(int num1, int num2)
+  static double computeMaximum(int num1, int num2)
   {
     if (num1 > num2)
     {
       return num1;
     }
-    else if (num1 == num2)
-    {
-      return;
-    }
-    else
+    else if (num1 < num2)
     {
       return num2;
     }
   }
-  double computeMaximum(float num1, float num2)
+  static double computeMaximum(float num1, float num2)
   {
     if (num1 > num2)
     {
       return num1;
     }
-    else if (num1 == num2)
-    {
-      return;
-    }
-    else
+    else if (num1 < num2)
     {
       return num2;
     }
   }
 
-  double computeMaximumFromArray(double *arraylist, int size)
+  static double computeMaximumFromArray(const double *array_list, int size)
   {
-    double maxValue = arraylist[0];
-    for (unsigned int i = 0; i < size; i++)
+    double maxValue = array_list[0];
+    for (  int i = 0; i < size; i++)
     {
-      if (arraylist[i] > maxValue)
+      if (array_list[i] > maxValue)
       {
-        maxValue = arraylist[i];
+        maxValue = array_list[i];
       }
     }
     return maxValue;
   }
-  double computeMaximumFromArray(int *arraylist, int size)
+  static double computeMaximumFromArray(const int *array_list, int size)
   {
-    double maxValue = arraylist[0];
-    for (unsigned int i = 0; i < size; i++)
+    double maxValue = array_list[0];
+    for (  int i = 0; i < size; i++)
     {
-      if (arraylist[i] > maxValue)
+      if (array_list[i] > maxValue)
       {
-        maxValue = arraylist[i];
+        maxValue = array_list[i];
       }
     }
     return maxValue;
   }
-  double computeMaximumFromArray(float *arraylist, int size)
+  static double computeMaximumFromArray(const float *array_list, int size)
   {
-    double maxValue = arraylist[0];
-    for (unsigned int i = 0; i < size; i++)
+    double maxValue = array_list[0];
+    for (  int i = 0; i < size; i++)
     {
-      if (arraylist[i] > maxValue)
+      if (array_list[i] > maxValue)
       {
-        maxValue = arraylist[i];
+        maxValue = array_list[i];
       }
     }
     return maxValue;
   }
 
-  double computeRectangleArea(double length, double breadth)
+  static double computeRectangleArea(double length, double breadth)
   {
     return length * breadth;
   }
-  double computeRectangleArea(int length, double breadth)
+  static double computeRectangleArea(int length, double breadth)
   {
     return length * breadth;
   }
-  double computeRectangleArea(float length, double breadth)
+  static double computeRectangleArea(float length, double breadth)
   {
     return length * breadth;
   }
 
-  double computeRectanglePerimeter(double length, double breadth)
+  static double computeRectanglePerimeter(double length, double breadth)
   {
     return 2 * (length + breadth);
   }
-  double computeRectanglePerimeter(int length, double breadth)
+  static double computeRectanglePerimeter(int length, double breadth)
   {
     return 2 * (length + breadth);
   }
-  double computeRectanglePerimeter(float length, double breadth)
+  static double computeRectanglePerimeter(float length, double breadth)
   {
     return 2 * (length + breadth);
   }
 
-  double computeSquareArea(double side)
+  static double computeSquareArea(double side)
   {
     return side * side;
   }
-  double computeSquareArea(int side)
+  static double computeSquareArea(int side)
   {
     return side * side;
   }
-  double computeSquareArea(float side)
+  static double computeSquareArea(float side)
   {
     return side * side;
   }
-  double computeSquarePerimeter(double side)
+  static double computeSquarePerimeter(double side)
   {
     return 4 * side;
   }
-  double computeSquarePerimeter(int side)
+  static double computeSquarePerimeter(int side)
   {
     return 4 * side;
   }
-  double computeSquarePerimeter(float side)
+  static double computeSquarePerimeter(float side)
   {
     return 4 * side;
   }
-  double computeCircleCircumference(int radius) {
+  static double computeCircleCircumference(int radius) {
     return 2 * PI * radius;
   }
-  double computeCircleCircumference(float radius) {
+  static double computeCircleCircumference(float radius) {
     return 2 * PI * radius;
   }
-  double computeCircleCircumference(double radius) {
+  static double computeCircleCircumference(double radius) {
     return 2 * PI * radius;
   }
-  double computeCircleArea(int radius) {
+  static double computeCircleArea(int radius) {
     return PI * radius * radius;
   }
-  double computeCircleArea(double radius) {
+  static double computeCircleArea(double radius) {
     return PI * radius * radius;
   }
-  double computeCircleArea(float radius) {
+  static double computeCircleArea(float radius) {
     return PI * radius * radius;
   }
-  bool checkEven(int number)
+  static bool checkEven(int number)
   {
-    if (number % 2 == 0)
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
+      return number % 2 == 0;
   }
-  bool checkEven(long int number)
+  static bool checkEven(long int number)
   {
-    if (number % 2 == 0)
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
+      return number % 2 == 0;
   }
-  bool checkOdd(int number)
+  static bool checkOdd(int number)
   {
-    if (number % 2 == 0)
-    {
-      return false;
-    }
-    else
-    {
-      return true;
-    }
+      return number % 2 != 0;
   }
-  bool checkOdd(long int number)
+  static bool checkOdd(long int number)
   {
-    if (number % 2 == 0)
-    {
-      return false;
-    }
-    else
-    {
-      return true;
-    }
+      return number % 2 != 0;
   }
 
 protected:
