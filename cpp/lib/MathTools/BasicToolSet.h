@@ -111,9 +111,9 @@ public:
   static bool addBooleanList(const bool *input_list, int size)
   {
     bool result = false;
-    for (  int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
-      result += input_list[i];
+      result = result + input_list[i];
     }
     return result;
   }
@@ -233,22 +233,45 @@ public:
     bool result = true;
     for (  int i = 0; i < size; i++)
     {
-      result *= input_list[i];
+      result = result * input_list[i];
     }
     return result;
   }
 
   static double divideNum(double num1, double num2)
   {
-    return num1 / num2;
+    try {
+      if (num2 == 0) throw num2;
+      return num1 / num2;
+    }
+    catch (int ex) {
+      std::cout << "DivisionByZeroError" << std::endl;
+      // return 0;
+    }
+    // return num1 / num2;
   }
   static double divideNum(int num1, int num2)
   {
-    return ((double)num1 / (double )num2);
+    try {
+      if (num2 == 0) throw num2;
+      return num1 / num2;
+    }
+    catch (int ex) {
+      std::cout << "DivisionByZeroError" << std::endl;
+      // return 0;
+    }
+    // return ((double)num1 / (double )num2);
   }
   static double divideNum(float num1, float num2)
   {
-    return num1 / num2;
+    try {
+      if (num2 == 0) throw num2;
+      return num1 / num2;
+    }
+    catch (float ex) {
+      std::cout << "DivisionByZeroError" << std::endl;
+    }
+    // return num1 / num2;
   }
 
   static double divideArrayNumbers(const double *array_list, int size)
@@ -256,7 +279,14 @@ public:
     double total = 1;
     for (  int i = 0; i < size; i++)
     {
-      total /= array_list[i] / total;
+      try {
+        if (total == 0) throw total;
+        total /= array_list[i] / total;
+      }
+      catch (double ex) {
+        total /= array_list[i] / 1;
+      }
+      // total /= array_list[i] / total;
     }
     return total;
   }
@@ -265,7 +295,14 @@ public:
     double total = 1;
     for (  int i = 0; i < size; i++)
     {
-      total /= array_list[i] / total;
+      // total /= array_list[i] / total;
+      try {
+        if (total == 0) throw total;
+        total /= array_list[i] / total;
+      }
+      catch (int ex) {
+        total /= array_list[i] / 1;
+      }
     }
     return total;
   }
@@ -274,7 +311,13 @@ public:
     double total = 1;
     for (  int i = 0; i < size; i++)
     {
-      total /= array_list[i] / total;
+      // total /= array_list[i] / total;
+      try {
+        if (total == 0) throw total;
+        total /= array_list[i] / total;
+      } catch (float ex) {
+        total /= array_list[i] / 1;
+      }
     }
     return total;
   }
