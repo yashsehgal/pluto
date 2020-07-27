@@ -1,18 +1,17 @@
 #ifndef _STRING_TOOLS_MODULE__
 #define _STRING_TOOLS_MODULE__
 
-
 #include <string>
 
 class StringTools {
   private:
   public:
-  int getStringLength(char *testString) {
+  static int getStringLength(char *testString) {
     int length = 0;
     while(testString[length] != '\0') {++length;}
     return (int)length;
   }
-  int getWordCount(char *testString) {
+  static int getWordCount(char *testString) {
     int length = 0;
     int numberOfWords = 0;
     while(testString[length] != '\0') {++length;}
