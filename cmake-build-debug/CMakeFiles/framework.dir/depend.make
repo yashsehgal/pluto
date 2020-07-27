@@ -4,6 +4,7 @@
 CMakeFiles\framework.dir\cpp\main.cpp.obj: ..\cpp\lib\DatafileTools\connectfile.h
 CMakeFiles\framework.dir\cpp\main.cpp.obj: ..\cpp\lib\MathTools\AdvancedTools\LinearAlgebra.h
 CMakeFiles\framework.dir\cpp\main.cpp.obj: ..\cpp\lib\MathTools\AdvancedTools\ScientificToolSet.h
+CMakeFiles\framework.dir\cpp\main.cpp.obj: ..\cpp\lib\MathTools\BasicToolSet.h
 CMakeFiles\framework.dir\cpp\main.cpp.obj: ..\cpp\lib\MathTools\BooleanAlgebra.h
 CMakeFiles\framework.dir\cpp\main.cpp.obj: ..\cpp\lib\StringTools.h
 CMakeFiles\framework.dir\cpp\main.cpp.obj: ..\cpp\main.cpp

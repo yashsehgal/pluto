@@ -16,6 +16,12 @@ string
 
 C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/ScientificToolSet.h
 
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BasicToolSet.h
+iostream
+-
+string
+-
+
 C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BooleanAlgebra.h
 iostream
 -
@@ -31,6 +37,8 @@ iostream
 -
 
 C:/Users/yashs/Desktop/framework/cpp/main.h
+lib/MathTools/BasicToolSet.h
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BasicToolSet.h
 lib/MathTools/BooleanAlgebra.h
 C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BooleanAlgebra.h
 lib/MathTools/AdvancedTools/ScientificToolSet.h
