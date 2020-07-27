@@ -6,23 +6,23 @@
 class StringTools {
   private:
   public:
-  static int getStringLength(char *testString) {
+  static int getStringLength(const char *testString) {
     int length = 0;
     while(testString[length] != '\0') {++length;}
     return (int)length;
   }
-  static int getWordCount(char *testString) {
+  static int getWordCount(const char *testString) {
     int length = 0;
     int numberOfWords = 0;
     while(testString[length] != '\0') {++length;}
-    for(unsigned int count = 0; count < length; count++) {
+    for( int count = 0; count < length; count++) {
       if (testString[count] == '\t' || testString[count] == ' ' || testString[count] == '\0') {
         ++numberOfWords;
       }
     }
-    return (int)numberOfWords;
+    return (int)numberOfWords + 1;
   }
-  int getStringCount(char * testString, char * word) {
+  static int getStringCount(const char * testString, const char * word) {
     int wordCount = 0;
     int length = 0;
     int wordLength = 0;
@@ -31,9 +31,9 @@ class StringTools {
     while(word[wordLength] != '\0') {++wordLength;}
     // computing main test_string length
     while(testString[length] != '\0') {++length;}
-    for(unsigned int count = 0; count < length; count++) {
+    for( int count = 0; count < length; count++) {
       while(testString[count] != '\0') {
-        for(unsigned int i = 0; i < wordLength; i++) {
+        for( int i = 0; i < wordLength; i++) {
           if(testString[i] != word[i]) {
             ++wordCount;
           } else {
@@ -44,21 +44,21 @@ class StringTools {
     }
     return (int)wordCount;
   }
-  int getSymbolCount(char * testString, char * symbol) {
+  static int getSymbolCount(const char * testString, const char * symbol) {
     int length = 0;
     int symbolCount = 0;
     int symbolLength = 1;
 
     // computing testString length
     while(testString[length] != '\0') {++length;}
-    for(unsigned int count = 0; count < length; count++) {
+    for( int count = 0; count < length; count++) {
       int indexValue = symbolLength - 1;
       if(testString[count] == symbol[indexValue]) {++symbolCount;}
     }
     return (int)symbolCount;
   }
 
-  char * connectStrings(char * testString, char * joinableString) {
+  static char * connectStrings(const char * testString, const char * joinableString) {
     int lengthOfTestString = 0;
     int lengthOfJoinableString = 0;
     while(testString[lengthOfTestString] != '\0') {++lengthOfTestString;}
@@ -66,66 +66,65 @@ class StringTools {
     // int testStringLength = lengthOfTestString;
     // int joinableStringLength = lengthOfJoinableString;
     // const int totalLength = joinableStringLength + testStringLength;
-    char joinedString[1000];     // this is causing an error case due to the explicit usage of const int operation
+    char joinedString[100];     // this is causing an error case due to the explicit usage of const int operation
     int currentIndex = 0;
-    for(unsigned int count = 0; count < lengthOfTestString; count++) {
+    for( int count = 0; count < lengthOfTestString; count++) {
       joinedString[count] = testString[count];
       currentIndex++;
     }
-    for(unsigned int count = 0; count < lengthOfJoinableString; count++) {
+    for( int count = 0; count < lengthOfJoinableString; count++) {
       joinedString[count + currentIndex] = joinableString[count];
       currentIndex++;
     }
-    return (char *)joinedString;
+    return joinedString;
   }
 
-  void copyString(char *(&testString), char * stringToCopy) {
+  static void copyString(char *(&testString), const char * stringToCopy) {
     int testStringLength = 0;
     while(testString[testStringLength] != '\0') {++testStringLength;}
     int stringToCopyLength = 0;
     while(stringToCopy[stringToCopyLength] != '\0') {++stringToCopyLength;}
 
     // now we have lengths of all the strings
-    for(unsigned int count = 0; count < testStringLength; count++) {
+    for( int count = 0; count < testStringLength; count++) {
       testString[count] = '\0';
     }
-    int testStringLength = 0;
-    for(unsigned int count = 0; count < stringToCopyLength; count++) {
+    testStringLength = 0;
+    for( int count = 0; count < stringToCopyLength; count++) {
       testString[count] = stringToCopy[count];
       ++testStringLength;
     }
   }
 
-  int getCapitalLetterCount(char * testString) {
+  static int getCapitalLetterCount(const char * testString) {
     int length = getStringLength(testString);
     int numberOfCapitalLetters = 0;
-    for(unsigned int count = 0; count < length; count++) {
+    for( int count = 0; count < length; count++) {
       if(std::isupper(testString[count])) {
         numberOfCapitalLetters++;
       }
     }
     return (int)numberOfCapitalLetters;
   }
-  int getLowerLetterCount(char * testString) {
+  static int getLowerLetterCount(const char * testString) {
     int length = getStringLength(testString);
     int numberOfLowerLetter = 0;
-    for(unsigned int count = 0; count < length; count++) {
+    for( int count = 0; count < length; count++) {
       if(std::islower(testString[count])) {
         numberOfLowerLetter++;
       }
     }
   }
 
-  bool compareString(char * testString, char * sourceString) {
+  static bool compareString(const char * testString, const char * sourceString) {
     int vecCount = 0;
     if(std::strlen(testString) == std::strlen(sourceString)) {
-      for(unsigned int count = 0; count < std::strlen(testString); count++) {
-        if(testString[count] == sourceString[count]) vecCount++;
+      for( int count = 0; count < (signed int)std::strlen(testString); count++) {
+        if(testString[count] == sourceString[count]) ++vecCount;
         else break;
       }
     }
-    if(std::strlen(testString) == std::strlen(sourceString) == vecCount) return true;
-    else return false;
+      return std::strlen(testString) == vecCount && std::strlen(sourceString) == vecCount;
   }
   
   protected:

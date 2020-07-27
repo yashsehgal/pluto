@@ -8,18 +8,19 @@ private:
 //    BasicToolSet basicToolSet;
 public:
     static void audit_functions() {
-        double resultHandler;
-        resultHandler = BasicToolSet::addNum(1, 2);
-        std::cout << "> " << resultHandler << std::endl;
-        resultHandler = BasicToolSet::addNum(1.23, 2.3);
-        std::cout << "> " << resultHandler << std::endl;
-        std::cout << "> " << resultHandler << std::endl;
-        resultHandler = BasicToolSet::subtractNum(5, 3);
-        std::cout << "> " << resultHandler << std::endl;
-        resultHandler = BasicToolSet::subtractNum(5.4, 5.6);
-        std::cout << "> " << resultHandler << std::endl;
-        resultHandler = BasicToolSet::productNum(3, 5);
-        std::cout << "> " << resultHandler << std::endl;
+        const char * testString = "helloworld";
+        std::cout << "GetStringLength logs> " << StringTools::getStringLength(testString) << std::endl;
+        const char * wordCountString = "hello people and human";
+        std::cout << "GetWordCount Logs> " << StringTools::getWordCount(wordCountString) << std::endl;
+        const char * str1 = "Hey I am Yash Sehgal. I am a developer and Designer";
+        const char * str2 = "am";
+//        std::cout << "GetStringCount Logs> " << StringTools::getStringCount(str1, str2) << std::endl;
+        const char * _str1 = "@yashsehgal";
+        const char * _symbol = "@";
+        std::cout << "GetSymbolCount Logs> " << StringTools::getSymbolCount(_str1, _symbol) << std::endl;
+        const char * str_1 = "yash";
+        const char * str_2 = "yassh";
+        std::cout << "CompareString Logs> " << StringTools::compareString(str_1, str_2) << std::endl;
     }
 };
 

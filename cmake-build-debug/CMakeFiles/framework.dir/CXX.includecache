@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/yashs/Desktop/framework/cpp/lib/DatafileTools/connectfile.h
+
 C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/LinearAlgebra.h
 iostream
 -
@@ -14,13 +16,13 @@ string
 
 C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/ScientificToolSet.h
 
-C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BasicToolSet.h
+C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BooleanAlgebra.h
 iostream
 -
+
+C:/Users/yashs/Desktop/framework/cpp/lib/StringTools.h
 string
 -
-
-C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BooleanAlgebra.h
 
 C:/Users/yashs/Desktop/framework/cpp/main.cpp
 main.h
@@ -29,12 +31,14 @@ iostream
 -
 
 C:/Users/yashs/Desktop/framework/cpp/main.h
-lib/MathTools/BasicToolSet.h
-C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BasicToolSet.h
 lib/MathTools/BooleanAlgebra.h
 C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/BooleanAlgebra.h
 lib/MathTools/AdvancedTools/ScientificToolSet.h
 C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/ScientificToolSet.h
 lib/MathTools/AdvancedTools/LinearAlgebra.h
 C:/Users/yashs/Desktop/framework/cpp/lib/MathTools/AdvancedTools/LinearAlgebra.h
+lib/DatafileTools/connectfile.h
+C:/Users/yashs/Desktop/framework/cpp/lib/DatafileTools/connectfile.h
+lib/StringTools.h
+C:/Users/yashs/Desktop/framework/cpp/lib/StringTools.h
 
