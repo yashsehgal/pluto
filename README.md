@@ -1,4 +1,4 @@
-![C/C++ CI](https://github.com/yashsehgal/pluto/workflows/C/C++%20CI/badge.svg)
+![C/C++ CI](https://github.com/yashsehgal/pluto/workflows/C/C++%20CI/badge.svg) ![CI](https://github.com/yashsehgal/pluto/workflows/CI/badge.svg?branch=master)
 
 # Pluto
 
