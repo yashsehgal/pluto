@@ -1,0 +1,3 @@
+C:/Users/yashs/Desktop/framework/build/CMakeFiles/framework.dir
+C:/Users/yashs/Desktop/framework/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/yashs/Desktop/framework/build/CMakeFiles/ZERO_CHECK.dir

@@ -22,4 +22,3 @@ def speak(textCommand):
     print("The speech command is valid, but empty!")
     print("Give a non-empty textCommand")
 
-
