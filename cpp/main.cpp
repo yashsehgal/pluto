@@ -12,14 +12,14 @@ public:
         std::cout << "GetStringLength logs> " << StringTools::getStringLength(testString) << std::endl;
         const char * wordCountString = "hello people and human";
         std::cout << "GetWordCount Logs> " << StringTools::getWordCount(wordCountString) << std::endl;
-        const char * str1 = "Hey I am Yash Sehgal. I am a developer and Designer";
-        const char * str2 = "am";
+        const char * str1 = "This is an example text";
+        const char * str2 = "an";
 //        std::cout << "GetStringCount Logs> " << StringTools::getStringCount(str1, str2) << std::endl;
-        const char * _str1 = "@yashsehgal";
+        const char * _str1 = "@authorname";
         const char * _symbol = "@";
         std::cout << "GetSymbolCount Logs> " << StringTools::getSymbolCount(_str1, _symbol) << std::endl;
-        const char * str_1 = "yash";
-        const char * str_2 = "yassh";
+        const char * str_1 = "person";
+        const char * str_2 = "personname";
         std::cout << "CompareString Logs> " << StringTools::compareString(str_1, str_2) << std::endl;
 
         const double a1 = 1;
